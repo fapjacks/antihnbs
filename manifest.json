@@ -1,0 +1,15 @@
+{
+  "name": "Anti-HN B.S. (Behavior-Shaping) Tool",
+  "version": "0.0.0",
+  "manifest_version": 2,
+  "description": "A Chrome extension to help sanitize HN of behavior-shaping mechanisms.",
+  "content_scripts": [
+    {
+      "matches": ["http://news.ycombinator.com/*", "https://news.ycombinator.com/*"],
+      "js": ["antihnbs.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'"
+}
